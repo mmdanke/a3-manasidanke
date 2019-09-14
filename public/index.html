@@ -175,7 +175,8 @@
 
         fetch( '/submit', {
           method:'POST',
-          body
+          body,
+          headers:{'Content-Type':'application/json'}
         }).then( function( response ) {
           document.getElementById('thankyou').style.display = "flex"
           document.getElementById('html-booking').style.display = "none"
@@ -258,7 +259,8 @@
         const body = JSON.stringify(updatedbooking)
         fetch('/update', {
           method: 'POST',
-          body
+          body,
+          headers:{'Content-Type':'application/json'}
         }).then(function () {
           presentBookingTable()
           viewLeftTable()
