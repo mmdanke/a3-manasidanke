@@ -191,11 +191,13 @@
     }
 
     const deletebooking = function (index) {
-      const bookingID = { bookingID: index }
-      const body = JSON.stringify(bookingID)
+      const bookingNumber = { bookingNumber: index }
+      const body = JSON.stringify(bookingNumber)
       fetch('/delete', {
         method: 'POST',
-        body
+        //body
+        body,
+        headers:{'Content-Type':'application/json'}
       })
       fetchBookings()
     }
