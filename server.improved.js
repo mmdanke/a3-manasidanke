@@ -1,10 +1,76 @@
+const express = require( 'express' )
+const app = express()
+const session   = require( 'express-session' ),
+      passport  = require( 'passport' ),
+      Local     = require( 'passport-local' ).Strategy,
+      bodyParser= require( 'body-parser' )
+
+const dir  = 'public/'
+
+
+app.use( express.static(dir) )
+app.use( bodyParser.json() )
+app.listen(process.env.PORT||3000)
+
+
+app.use( function( req, res, next ) {
+  console.log( 'url:', req.url )
+  next()
+})
+
+app.get( '/bookings', function (req, response) {
+  sendData( response, appdata );
+})
+
+app.post('/submit', function(req, response){
+  const booking = req.body;
+        //const groomingPrice=
+        const price = addingServices(parseInt(booking.massage), parseInt(booking.dogsize));
+
+        const newbooking = {
+          'name_id': booking.name_id,
+          'pupper_id':booking.pupper_id,
+          'groomingDescription': booking.groomingDescription,
+          'massage': parseInt(booking.massage),
+          'dogsize': parseInt(booking.dogsize),
+          'price': price,
+        };
+
+        appdata.push(newbooking);
+
+        response.writeHead( 200, "OK", {'Content-Type': 'text/plain' });
+        response.end();
+})
+
+app.post('/update', function(req, response){
+  const bookingToUpdate = req.body;
+        const editedPrice = addingServices(parseInt(bookingToUpdate.massage),parseInt(bookingToUpdate.dogsize));
+
+        const updatedbooking = {
+          'parent_id':bookingToUpdate.parent_id,
+          'name_id': bookingToUpdate.name_id,
+          'pupper_id': bookingToUpdate.pupper_id,
+          'groomingDescription': bookingToUpdate.groomingDescription,
+          'massage': parseInt(bookingToUpdate.massage),
+          'dogsize': parseInt(bookingToUpdate.dogsize),
+          'price': editedPrice,
+        };
+
+        appdata.splice(bookingToUpdate.index, 1, updatedbooking);
+
+        response.writeHead( 200, "OK", {'Content-Type': 'text/plain'});
+        response.end();
+
+})
+
+
+
 const http = require( 'http' ),
       fs   = require( 'fs' ),
       // IMPORTANT: you must run `npm install` in the directory for this assignment
       // to install the mime library used in the following line of code
-      mime = require( 'mime' ),
-      dir  = 'public/',
-      port = 3000;
+     mime = require( 'mime' ),
+     port = 3000;
 
 const appdata = [
   { 'name_id': 'Emily', 'pupper_id':'Clifford', 'groomingDescription': 'Haircut', 'massage': 0, 'dogsize': 0, 'price': 25},
@@ -33,12 +99,10 @@ const handleGet = function( request, response ) {
   }
 };
 
-const handlePost = function( request, response ) {
-  let dataString = '';
 
-  request.on( 'data', function( data ) {
-      dataString += data 
-  });
+
+const handlePost = function( request, response ) {
+  let dataString = request.body;
 
   request.on( 'end', function() {
     switch ( request.url ) {
@@ -133,4 +197,4 @@ const sendFile = function( response, filename ) {
    })
 };
 
-server.listen( process.env.PORT || port );
+//server.listen( process.env.PORT || port );
