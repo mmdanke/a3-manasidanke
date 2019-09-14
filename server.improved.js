@@ -63,6 +63,13 @@ app.post('/update', function(req, response){
 
 })
 
+app.post('/delete', function(req, response){
+  const bookingToDelete = req.body;
+        appdata.splice(bookingToDelete.bookingNumber, 1);
+        response.writeHead( 200, "OK", {'Content-Type': 'text/plain'});
+        response.end();
+})
+  
 
 
 const http = require( 'http' ),
