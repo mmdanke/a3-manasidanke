@@ -5,7 +5,27 @@
     <meta charset="utf-8">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
   </head>
-        <!--Title-->
+  <body>
+  
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+  <h>This is where the login page goes.</h>
+    
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+      <div id="bnfdshf">
+              <button id="login-btn">Submit Login Button</button>
+            </div>
+    </form>
+
+  </div>
+</div>
+    
+    
+<div id="maindisplay" class="twocolumn" style="display: none">   
+  <!--Title-->
   <body background>
     <div class="container">
       <header> 
@@ -22,7 +42,8 @@
             <a id="homepage-link" aria-label=""></a>
             <a id="table-link" aria-label="">Your History of Bookings</a>
           </nav>
-        </div>         
+        </div> 
+        
         <!--The Panel of Dogs-->
         <div id="left-form">
           <h3>
@@ -155,10 +176,39 @@
   <p>Proudly Rated: 5/5 paws.</p>
 </footer>
   </body>
-
-
-
-  <script>
+<script>
+  
+  const login = function(e){
+    e.preventDefault()
+  const body =JSON.stringify({username:document.getElementById('username').value,
+                             password:document.getElementById('password').value})
+  
+  fetch( '/login', {
+      method:'POST',
+      //body:JSON.stringify({ username:'charlie', password:'charliee' }),
+      headers: { 'Content-Type': 'application/json' },
+    body
+    })
+    .then(function(response){
+    if (response.status===200){
+      //console.log('success')
+      document.getElementById('formContent').style.display="none"
+      document.getElementById('maindisplay').style.display=""
+      return true;
+    }
+    else {
+      console.log('error')
+      return true;
+  }
+    
+  })  
+  }
+  
+  
+    
+   // .then( response => response.json() )
+   // .then( console.log )
+  
     const addbooking = function( e ) {
       e.preventDefault()
 
@@ -346,6 +396,9 @@
 
       const submitButton = document.getElementById( 'submit-btn' )
       submitButton.onclick = addbooking
+      
+      const loginButton = document.getElementById('login-btn')
+      loginButton.onclick= login
 
       const tabletab = document.getElementById( 'table-link' )
       tabletab.onclick = presentBookingTable
@@ -365,4 +418,5 @@
     }
 
   </script>
+</div>
 </html>
