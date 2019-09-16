@@ -5,12 +5,12 @@ mmdanke-Manasi Danke
 ## Puppy Pals!
 My glitch link: http://a3-charlieroberts.glitch.me
 
-- the goal of the application
-- challenges you faced in realizing the application
-- what authentication strategy / database you chose to use and why (choosing one because it seemed the easiest to implement is perfectly acceptable)
-- what CSS framework you used and why.
-  - include any modifications to the CSS framework you made via custom CSS you authored.
-- the five Express middleware packages you used and a short (one sentence) summary of what each one does.
+- The goal of the application:
+- Challenges you faced in realizing the application:
+- What authentication strategy / database you chose to use and why (choosing one because it seemed the easiest to implement is perfectly acceptable):
+- What CSS framework you used and why:
+  - Modifications to the CSS framework I made via custom CSS I authored.
+- The five Express middleware packages I used and a summary of what each one does:
 
 ## Technical Achievements
 - **Tech Achievement 1**: I used OAuth authentication via the GitHub strategy
