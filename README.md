@@ -1,52 +1,74 @@
-## a2-mmdanke-Manasi-Danke
+Assignment 3 - Persistence: Two-tier Web Application with Flat File Database, Express server, and CSS template
+===
 
-Assignment 2 - Short Stack: Basic Two-tier Web Application using HTML/CSS/JS and Node.js  
+Due: September 16th, by 11:59 AM.
 
-Deployed on Glitch: https://glitch.com/~a2-mmdanke-manasi-danke
+This assignnment continues where we left off, extending it to use the most popular Node.js server framework (express), a flat file database suitable for small applications (lowdb), and a CSS application framework / template of your choice (Boostrap, Material Design, Semantic UI, Pure etc.)
 
-### Deliverables:
 
-# Puppy Pals -by Manasi Danke
-Puppy Pals is a service that provides grooming services for dogs. The website enables owners to fill out their name, their dog's name, enter in special details for the order, indicate the size of their dog, add on a massage, and be able to view the price!
+Baseline Requirements
+---
 
-The website, with the help of a html form and table, helps the pet owners effectively communicate the above details to the groomers by filling out a form. The owners can simply fill out a form each time and have those details organized neatly in a table.
+Your application is required to implement the following functionalities:
 
-The "Update Booking" and "Delete Booking" are key innovations that help communicate the booking details to the pet owner's satisfaction. The pet owner can simply edit booking details or delete a booking. It really helps to provide flexibility and comfort for the pet owner, so that they have better control of their booking details/info and have a better customer experience.
+- a `Server`, created using Express (no alternatives will be accepted for this assignment)
+- a `Results` functionality which shows the entire dataset residing in the server's memory
+- a `Form/Entry` functionality which allows users to add, modify, and delete data items (must be all three!) associated with their user name / account.
+- Use of at least five [Express middleware packages](https://expressjs.com/en/resources/middleware.html). Explore! 
+- Basic authentication using the [Passport middleware](http://www.passportjs.org) for Express (this counts as one of your five middleware packages). We encourage using the Local strategy, but OAuth (Open Authentication) can also be used for additional technical achievement. The course staff cannot help you with the various flavors of OAuth strategies. YOU MUST PROVIDE US WITH ACCOUNT CREDENTIALS TO LOGIN TO YOUR APPLICATION IF YOU USE OAUTH. The course staff cannot be expected to have credentials for any particular OAuth service.
+- Persistent data storage in between server sessions. [lowdb](https://github.com/typicode/lowdb) is a suitable database package for this assignment and will be discussed in class.
+- Use of a [CSS framework or template](https://github.com/troxler/awesome-css-frameworks). This should do the bulk of your styling/CSS for you and be appropriate to your application. For example, don't use [NES.css](https://nostalgic-css.github.io/NES.css/) (which is awesome!) unless you're creating a game or some type of retro 80s site.
 
-The website offers an easy way for the pet owners to book pet pampering services with ease, while giving them greater control of the details they communicate to the groomers.
+Your application is required to demonstrate the use of the following concepts:
 
-Ideas for the future: 
-- Include a time and date stamp for the booking entry
-- Mark bookings that are completed, in progress, or processing
+HTML:
+- HTML input tags and form fields of various flavors (`<textarea>`, `<input>`, checkboxes, radio buttons etc.)
+- HTML that can display all data *for a particular authenticated user*. Note that this is different from the last assignnment, which required the display of all data in memory on the server.
+
+Note that it might make sense to have two simple pages for this assignment, one that handles login / authentication, and one that contains the rest of your application. For this assignment, it is acceptable to simply create new user accounts upon login if none exist, however, you must alert your users to this fact. If you're not using OAuth 
+
+CSS:
+- CSS styling should primarily be provided by your chosen template/framework. Oftentimes a great deal of care has been put into designing CSS templates; don't override their stylesheets unless you are extremely confident in your graphic design capabilities. The idea is to use CSS templates that give you a professional looking design aesthetic without requiring you to be a graphic designer yourself.
+
+JavaScript:
+- At minimum, a small amount of front-end JavaScript to get / fetch data from the server. See the [previous assignment](https://github.com/cs4241-19a/a2-shortstack) for reference.
+
+Node.js:
+- A server using Express, at least five pieces of Express middleware, and a persistent database (a flat file using lowdb is great).
+
+Deliverables
+---
+
+Do the following to complete this assignment:
+
+1. Implement your project with the above requirements. A good potential starting point is to use the "hello-express" project template inside of Glitch; this appears as an option when you hit the "New Project" button. Use the work you did in the last assignment as a reference to implement functionality, as well as the notes from class on 9/9 and 9/12.
+2. If you developed your project locally, deploy your project to Glitch, and fill in the appropriate fields in your package.json file.
+3. Test your project to make sure that when someone goes to your main page on Glitch, it displays correctly.
+4. Ensure that your project has the proper naming scheme `a3-yourname` so we can find it.
+5. Fork this repository and modify the README to the specifications below. You do not need to include any of your project files in this repo (we will see those on Glitch), you only need to update and commit the README file.
+6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a3-gitname-firstname-lastname`.
+
+Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
+---
+
+## Your Web Application Title
+
+your glitch link e.g. http://a3-charlieroberts.glitch.me
+
+Include a very brief summary of your project here. Images are encouraged, along with concise, high-level text. Be sure to include:
+
+- the goal of the application
+- challenges you faced in realizing the application
+- what authentication strategy / database you chose to use and why (choosing one because it seemed the easiest to implement is perfectly acceptable)
+- what CSS framework you used and why.
+  - include any modifications to the CSS framework you made via custom CSS you authored.
+- the five Express middleware packages you used and a short (one sentence) summary of what each one does.
 
 ## Technical Achievements
-- With the help of github and Stack Overflow, I was able to do error checking to make sure the text fields without the default selected radio button options, had something in them. If they are not filled, a yellow box pops up next to the submit button.
-- Nav Bar links link to the html form or updated table.
-- Can change more than one field at a time when booking is being updated.
+- **Tech Achievement 1**: I used OAuth authentication via the GitHub strategy
+- **Tech Achievement 2**: I used over ten Express middleware packages, enabling me to create a server that...
 
-## Design/Evaluation Achievements
-- Created my own layout, design, and color scheme for this assignment using elements such as a container to create a top banner, navigation menu bar, customization on strategically-placed buttons and other elements using values and ids, flexbox to create a panel of pictures, and a personalized table to store database values.
-- Implemented Radio Buttons and Text Areas as a way to have different inputs on the form.
-- Yellow Incompleted Fields Box when all the fields have not been filled out(with help from github).
-- Friendly and visually appealing website with dog puns. Thought placed into word choice and site content-especially with how it is styled with font-family and font-style.
-
-### Resources Used:
-- I was able to browse a lot of code from other Github https://github.com/ and CodePen https://codepen.io/ projects and used snippets of code I found on these; however, I was able to use those snippets to personalize this website and delete/add elements of my own.
-- HTML Forms: https://www.w3schools.com/html/html_forms.asp
-- glitch.com to deploy the code
-- Stack Overflow for general queries
-- Learning more about CSS and HTML: https://marksheet.io/css-basics.html
-- Understanding more about fetch, GET, and POST https://l.facebook.com/l.php?u=https%3A%2F%2Fdev.to%2Fdev_amaz%2Fusing-fetch-api-to-get-and-post--1g7d%3Ffbclid%3DIwAR0GPdjWtMBU7RJDK03SsObGqO1y9K7aBOVSxX8qjMXuygCeE9_kkbK7VM0&h=AT0DNGOf60spSn9KhAIq7WS6Pr83t9oLiRQGZGN8QbR9jNIQNVsru3lc65eVKcBVGO0sVsdps7AhGM_lCzha7xb9jb--03Ao6uvfnTNnKfVl4HGW6YpeXVLZfmePc6jvXzmzbQ
-- CSS and Flexbox Styling: https://medium.com/@sashatran/check-out-the-page-here-7d71a2c43a10?fbclid=IwAR0ed_IDki7Yr5_mmd7aqTaQQUD7YIGTxiyqTdx-CczOZEbEVW5cIZ-wPJk
-- CSS and Flexbox Styling:https://www.developerdrive.com/responsive-image-gallery-flexbox/?fbclid=IwAR3NioNnFOmDtjSeHdIunLz-J7bmB9tdP63PRv4tE4YcG7AXrlNIPkkAPkI
-
-### Pictures From These Sites:
-- http://ibiyaya.com/en/news/
-- http://www.litlepups.net/d7c6bb6376e96960.html
-- https://steemit.com/funny/@funnyquotes/little-puppys-spa-day
-- https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi_qufy2sPkAhUsT98KHQ-cC5gQjB16BAgBEAM&url=https%3A%2F%2Fwww.pawparazzishop.com%2F&psig=AOvVaw0Pch3dyjwTnQ2iVVuGM9MP&ust=1568117455900069
-- https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwitoISD28PkAhWyTt8KHVqVCKoQjB16BAgBEAM&url=http%3A%2F%2Fabsri.com%2Fcompassion-is-mans-best-friend%2F&psig=AOvVaw3un4KfgYBrnBMPwSSRUdMT&ust=1568117493857506
-- https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjR0buV28PkAhXGnuAKHT0gC3MQjB16BAgBEAM&url=https%3A%2F%2Fbesthqwallpapers.com%2Fpt%2Fdownload%2Foriginal%2F35690&psig=AOvVaw1SEztdObA-KLjqH2FNHCq4&ust=1568117531987780
-
-
-
+### Design/Evaluation Achievements
+- **Design Achievement 1**: I tested my application using screen reading software, and found that...
+- **Design Achievement 2**: I followed best practices for accessibility, including providing alt attributes for images and using semantic HTML. There are no `<div>` or `<span>` elements in my document.
+- **Design Achievement 3**: We tested the application with n=X users, finding that...
