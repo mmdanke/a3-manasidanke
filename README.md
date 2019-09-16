@@ -12,7 +12,7 @@ My glitch link: http://a3-charlieroberts.glitch.me
   - Modifications to the CSS framework I made via custom CSS I authored.
 - The five Express middleware packages I used and a summary of what each one does:
 
-- - 
+   - 
 
 ## Technical Achievements
 - **Tech Achievement 1**: Error checking for username and password
