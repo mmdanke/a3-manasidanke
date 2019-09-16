@@ -4,12 +4,43 @@
     <title>Manasi Danke-Puppy Pals! </title>
     <meta charset="utf-8">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  
   </head>
   <body>
   
 <div class="wrapper fadeInDown">
   <div id="formContent">
-  <h>This is where the login page goes.</h>
+    
+    
+    <div class="container1">
+      <header> 
+        <h1>Puppy Pals</h1>
+        <h2>Helping Puppers Feel Their Best</h2>
+        <br></br>
+        </div>
+      </header> 
+      <main>
+        <!--Menu Bar-->        
+        
+        <!--The Panel of Dogs-->
+        <div id="left-form1">
+          <h3>
+           <img class="item" src="data:image/jpeg;base64,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" alt="Example image">
+           </h3>
+          </h3>
+        </div>
+    
+    
+    
+    
+    
+    <h1 class="ml2">Log In Below</h1>
+
     
     <!-- Login Form -->
     <form>
@@ -29,8 +60,8 @@
   <body background>
     <div class="container">
       <header> 
-        <h1>Puppy Pals</h1>
-        <h2>Helping Puppers Feel Their Best</h2>
+        <h1> Welcome to Puppy Pals, Charlie!</h1>
+        <h2>Our Mission is to Help Your Puppers Feel Their Best!</h2>
         <br></br>
         </div>
       </header> 
@@ -59,29 +90,29 @@
           <br></br>
           <h3>Booking A Pampering Session</h3>
           <br></br>
-          <h>  Our pampering center offers a $25 package with all inclusive bath, facial, pawdicure, tooth brushing, brush-out, and ear cleaning services.</h>
+          <h><b>Our pampering center offers a $25 package with all inclusive bath, facial, pawdicure, tooth brushing, brush-out, and ear cleaning services.</b></h>
           <br></br>
-          <h><u>Extra:</u> We charge $5 for an a la carte massage/tummy rub.</h>
+          <h><u><b>Extra:</u> We charge $5 for an a la carte massage/tummy rub.</b></h>
           <br></br>
-          <h> <u>Additional Fee:</u> We Charge $5 extra for larger dogs.</h>
+          <h><b><u>Additional Fee:</u> We Charge $5 extra for larger dogs.</b></h>
           <br></br>
           <br></br>
           <br></br>
           <form action="">
             <div class="html-form-details">
-              <label for="name_id" class="form-label">What is Your Name:</label>
+              <label for="name_id" class="form-label"><b>What is Your Name:</b></label>
               <input type='text' id='name_id' required>
             </div> 
             <div class="html-form-details text-input">
-              <label for="pupper_id" class="form-label">What is Your Pupper's Name:</label>
+              <label for="pupper_id" class="form-label"><b>What is Your Pupper's Name:</b></label>
               <textarea id='pupper_id' required></textarea>
             </div>        
             <div class="html-form-details text-input">
-              <label for="groomingDescription" class="form-label">Special Notes: Anything to Be Mindful Of (ex: allergies, etc...)</label>
+              <label for="groomingDescription" class="form-label"><b>Special Notes: Anything to Be Mindful Of (ex: allergies, etc...)</b></label>
               <textarea id='groomingDescription' required></textarea>
             </div>            
             <div class="html-form-details" role="radiogroup" aria-label="massage-level">
-              <p class="form-label">Would Your Pupper Like a Massage?</p>
+              <p class="form-label"><b>Would Your Pupper Like a Massage?</b></p>
               <input type="radio" role="radio" id="Withoutmassage" name="massage" value="0">
               <label for="notToday">Not Today</label>
               <input type="radio" role="radio" checked id="" name="massage" value="5">
@@ -89,7 +120,7 @@
             </div>
              <br></br>   
             <div class="html-form-details" role="radiogroup" aria-label="pup-size">
-              <p class="form-label">Is Your Pupper A Lap Dog or Big Dog?</p>
+              <p class="form-label"><b>Is Your Pupper A Lap Dog or Big Dog?</b></p>
               <input type="radio" role="radio" id="Withoutdogsize" name="dogsize" value="0">
               <label for="lap dog">My Dog Can Fit on my Lap</label>
               <input type="radio" role="radio" checked id="" name="dogsize" value="5">
@@ -326,7 +357,7 @@
       document.getElementById( 'name_id' ).value = ''
       document.getElementById( 'pupper_id' ).value = ''
       document.getElementById( 'groomingDescription' ).value = ''
-      document.getElementById('lapdog').checked = true
+      //document.getElementById('lapdog').checked = true
       document.getElementById('allmassage').checked = true
       document.getElementById('dogsize').checked = true
     }
@@ -416,6 +447,27 @@
       newbookingButton.onclick = presentBookingForm
       
     }
+  
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 
   </script>
 </div>
