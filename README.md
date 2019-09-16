@@ -13,10 +13,11 @@ My glitch link: http://a3-charlieroberts.glitch.me
 - The five Express middleware packages I used and a summary of what each one does:
 
 ## Technical Achievements
-- **Tech Achievement 1**: I used OAuth authentication via the GitHub strategy
-- **Tech Achievement 2**: I used over ten Express middleware packages, enabling me to create a server that...
+- **Tech Achievement 1**: Error checking for username and password
+- **Tech Achievement 2**: Autmatically logs you out after some time
+- **Tech Achievement 2**: More than 5 middleware
 
 ### Design/Evaluation Achievements
-- **Design Achievement 1**: I tested my application using screen reading software, and found that...
-- **Design Achievement 2**: I followed best practices for accessibility, including providing alt attributes for images and using semantic HTML. There are no `<div>` or `<span>` elements in my document.
-- **Design Achievement 3**: We tested the application with n=X users, finding that...
+- **Design Achievement 1**: Login Page... is different...asking a friend
+- **Design Achievement 2**: Animation...fade in and words
+- **Design Achievement 3**: Words-bolded, word choice,
