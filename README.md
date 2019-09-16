@@ -29,3 +29,6 @@ My glitch link: http://a3-charlieroberts.glitch.me
 - **Design Achievement 1**: Login Page... is different...asking a friend
 - **Design Achievement 2**: Animation...fade in and words
 - **Design Achievement 3**: Words-bolded, word choice,
+
+Resources Used: https://bootsnipp.com/snippets/aMnz0
+
