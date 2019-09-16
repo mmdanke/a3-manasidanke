@@ -1,4 +1,4 @@
-## Assignment 3 - Persistence: Two-tier Web Application with Flat File Database, Express server, and CSS template
+## Assignment 3 - Persistence: Two-Tier Web Application with Flat File Database, Express server, and CSS template
 
 mmdanke-Manasi Danke
 
