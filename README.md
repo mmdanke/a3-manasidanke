@@ -3,7 +3,7 @@
 mmdanke-Manasi Danke
 
 ## Puppy Pals!
-My glitch link: https://a3-manasidanke.glitch.me/
+My glitch link: https://glitch.com/~a3-manasi-danke
 
 ### The goal of the application:
 
