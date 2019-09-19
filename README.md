@@ -49,6 +49,7 @@ I only used Bootstrap for the login page, deleted the sign in/sing up tab, delet
 - **Tech Achievement 1**: Implemented error checking for username and password, which does not give access to the user if this person inputs the incorrect account details. Please note that the username is charlie and and password is charliee
 - **Tech Achievement 2**: Implemented a log out button that signs the user off and returns to the log in page. For increased security, the application automatically signs the user off and returns the user to the login page if the user has the application open to logged when they are signed in.
 - **Tech Achievement 3**: I chose to play with style.display to add this new login screen and chose to show it and make it disappear when needed, while not showing the main application page unless the username and password are correct.
+- **Note:**: I attempted to implement a registration button for another technical achievement, but I am have having difficulties with my database in implementing that.
 
 ### Design/Evaluation Achievements
 - **Design Achievement 1**: I received a lot of feedback from my friends regarding the login page as I implemented different versions of it. Using this input and suggestions, I chose to hide the main page until the user Login Page, chose to incorporate the Pupper Palls banner to keep the consistency in the application, and added the picture of a dog getting pampered to describe the purpose of the application without too many words.
