@@ -15,7 +15,7 @@ In this particular situation, Charlie is the only user since Pupply Palls would 
 
 Although the database does work, I faced a lot of challenges implementing lowdb because I was unsure whether it was saving data in my db.json and db1.json. I was able to use lowdb to achieve the minimal technical requirements of this assignment, but it became increasingly harder to debug when I could not find where my newly registered users were being saved. 
 
-For that reason, I will assume that Charlie is our only current user with username: charlie and password:charliee 
+# For that reason, I will assume that Charlie is our only current user with username: charlie and password:charliee 
 
 Besides that, I chose to attempt add, update, and delete booking the last assignment and has a bug with deleting entries since multiple entires would delete at times. I had to spend a while debugging that before I could be fully invested in implementing express, passport, and lowdb as a database.
 
@@ -26,7 +26,7 @@ I chose to implement lowdb for this particular project since I was not storing t
 
 ### What CSS framework you used and why:
 
-I chose to use Bootstrap for this assignment since it makes the application appear organized and clean: https://bootsnipp.com/snippets/aMnz0
+I chose to use Bootstrap for this assignment since it makes the application appear organized and clean.
 
 I only used Bootstrap for the login page, but designed my own template for everything after the inital login page I chose to display with display.style.
 
@@ -46,14 +46,13 @@ I only used Bootstrap for the login page, deleted the sign in/sing up tab, delet
  
 
 ## Technical Achievements
-- **Tech Achievement 1**: Error checking for username and password
-- **Tech Achievement 2**: Autmatically logs you out after some time
-- **Tech Achievement 2**: Attempted to register user
+- **Tech Achievement 1**: Implemented error checking for username and password, which does not give access to the user if this person inputs the incorrect account details. Please note that the username is charlie and and password is charliee
+- **Tech Achievement 2**: Implemented a log out button that signs the user off and returns to the log in page. For increased security, the application automatically signs the user off and returns the user to the login page if the user has the application open to logged when they are signed in.
+- **Tech Achievement 3**: I chose to play with style.display to add this new login screen and chose to show it and make it disappear when needed, while not showing the main application page unless the username and password are correct.
 
 ### Design/Evaluation Achievements
-- **Design Achievement 1**: Login Page... is different...asking a friend
-- **Design Achievement 2**: Animation...fade in and words
-- **Design Achievement 3**: Words-bolded, word choice,
+- **Design Achievement 1**: I received a lot of feedback from my friends regarding the login page as I implemented different versions of it. Using this input and suggestions, I chose to hide the main page until the user Login Page, chose to incorporate the Pupper Palls banner to keep the consistency in the application, and added the picture of a dog getting pampered to describe the purpose of the application without too many words.
+- **Design Achievement 2**: I added animation to the login page so that the login page slides from above and the username and password entry boxes appear soon after one would read the "Log In Below" heading.
 
 ### Resources Used:
  - Similar to last week's assignment, I was able to reference github, w3schools, bootsnip, and formal documentation on passport, lowdb, express, and bootstrap.
