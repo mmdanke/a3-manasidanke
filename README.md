@@ -15,7 +15,7 @@ In this particular situation, Charlie is the only user since Pupply Palls would 
 
 Although the database does work, I faced a lot of challenges implementing lowdb because I was unsure whether it was saving data in my db.json and db1.json. I was able to use lowdb to achieve the minimal technical requirements of this assignment, but it became increasingly harder to debug when I could not find where my newly registered users were being saved. 
 
-# For that reason, I will assume that Charlie is our only current user with username: charlie and password:charliee 
+# For that reason, I will assume that Charlie is our only current user with username: charlie and password: charliee 
 
 Besides that, I chose to attempt add, update, and delete booking the last assignment and has a bug with deleting entries since multiple entires would delete at times. I had to spend a while debugging that before I could be fully invested in implementing express, passport, and lowdb as a database.
 
